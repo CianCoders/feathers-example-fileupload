@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Feathersjs File Upload</title>
+
+        <link rel="stylesheet" href="assets/dropzone.css">
+        <script src="assets/dropzone.js"></script>
+
+        <script type="text/javascript" src="socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+        <script type="text/javascript" src="//npmcdn.com/feathers-client@^1.0.0/dist/feathers.js"></script>
+        <script type="text/javascript">
+            // feathers client initialization
+            var socket = io('http://localhost:3030');
+            const app = feathers()
+            .configure(feathers.hooks())
+            .configure(feathers.socketio(socket));
+            const uploadService = app.service('uploads');
+
+            // Now with Real-Time Support!
+            uploadService.on('created', function(file){
+                alert('Received file created event!', file);
+            });
+
+
+            // Let's use DropZone!
+            Dropzone.options.myAwesomeDropzone = {
+                paramName: "uri",
+                uploadMultiple: false,
+                init: function(){
+                    this.on('uploadprogress', function(file, progress){
+                        console.log('progresss', progress);
+                    });
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Let's upload some files!</h1>
+        <form action="/uploads"
+          class="dropzone"
+          id="my-awesome-dropzone"></form>
+    </body>
+</html>

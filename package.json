@@ -1,0 +1,29 @@
+{
+  "name": "feathers-example-upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "babel-eslint": "^6.0.4",
+    "body-parser": "^1.15.1",
+    "dauria": "^1.1.4",
+    "eslint": "^2.10.2",
+    "feathers": "^2.0.1",
+    "feathers-authentication": "^0.7.7",
+    "feathers-blob": "^1.0.5",
+    "feathers-errors": "^2.1.0",
+    "feathers-hooks": "^1.5.3",
+    "feathers-memory": "^0.7.1",
+    "feathers-rest": "^1.3.0",
+    "feathers-socketio": "^1.4.0",
+    "fs-blob-store": "^5.2.1",
+    "multer": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Dennis Xiloj <denjohx@gmail.com> (https://ciancoders.com)",
+  "license": "MIT"
+}
