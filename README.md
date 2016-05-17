@@ -9,12 +9,12 @@ A Feathers.js file upload example, using feathers-blob.
 
 ## How to use it: 
 
-* Clone it
+* Clone or download it. `git clone https://github.com/CianCoders/feathers-example-fileupload.git`
 * `$ cd feathers-example-fileupload`
 * `$ npm install`
 * `$ npm start`
 * Visit `http://localhost:3030/` for a simple feathers-blob example
-* Visit `http://localhost:3030/dropzone` for a dropzone example with socket.io client.
+* Visit `http://localhost:3030/dropzone.html` for a dropzone example with socket.io client.
 * Enjoy.
 
 
