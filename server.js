@@ -25,9 +25,9 @@ const app = feathers();
 // Serve our index page
 app.use('/', serveStatic(__dirname))
 // Parse HTTP JSON bodies
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '10mb'}));
 // Parse URL-encoded params
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({limit: '10mb', extended: true }));
 // Register hooks module
 app.configure(hooks());
 // Add REST API support
